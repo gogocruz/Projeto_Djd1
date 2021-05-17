@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/scenes/MainMenu.unity
+    guid: 43cad3c5678e8634281566681b2fc8fb
+  - enabled: 1
+    path: Assets/scenes/WaterPlanet.unity
+    guid: e0b80ab3a44c1f248a5e8c5218bbd180
   m_configObjects: {}
