@@ -18,10 +18,15 @@ public class folow : MonoBehaviour
         if (followTarget != null)
         {
             Vector3 targetPos = followTarget.position;
+
+
+
             Vector3 error = targetPos - currentPos;
 
             targetPos = currentPos + error * followSpeed;
             currentPos = new Vector3(targetPos.x, targetPos.y, currentPos.z);
+
+            currentPos.y += 12;
         }
         
 
