@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
     private Animator        animator;
     private int             nJumps;
     private float           timeOfJump;
+    private int             currentScore = 0;
+
+    public int score => currentScore;
 
     void Start()
     {
@@ -44,7 +47,7 @@ public class Player : MonoBehaviour
     }
 
    
-      private void Update()
+    private void Update()
     {
         hAxis = Input.GetAxis("Horizontal");
 
@@ -104,7 +107,12 @@ public class Player : MonoBehaviour
         groundCollider.enabled = isGround;
         airCollider.enabled = !isGround;
 
-    }          
+    }
+    
+    public void UpdateScore(int scoreIncrease)
+    {
+        currentScore += scoreIncrease;
+    }
 
     private void OnDrawGizmosSelected()
     {

@@ -9,7 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Roboto-Bold SDF - Surface
   m_Shader: {fileID: 4800000, guid: 85187c2149c549c5b33f0cdb02836b17, type: 3}
+<<<<<<< Updated upstream
   m_ShaderKeywords: GLOW_ON UNDERLAY_ON
+=======
+  m_ShaderKeywords: UNDERLAY_ON
+>>>>>>> Stashed changes
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -50,7 +54,10 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+<<<<<<< Updated upstream
     - _CullMode: 0
+=======
+>>>>>>> Stashed changes
     - _Diffuse: 0.5
     - _FaceDilate: 0.1
     - _FaceShininess: 0.8
@@ -68,7 +75,11 @@ Material:
     - _OutlineSoftness: 0.017
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
+<<<<<<< Updated upstream
     - _OutlineWidth: 0.376
+=======
+    - _OutlineWidth: 0.1
+>>>>>>> Stashed changes
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -97,13 +108,23 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< Updated upstream
     - _FaceColor: {r: 9.719331, g: 9.719331, b: 9.719331, a: 1}
     - _GlowColor: {r: 1, g: 0.83297265, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0.24528301, g: 0.18825665, b: 0.0011569981, a: 1}
+=======
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 0.3793165, b: 1, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+<<<<<<< Updated upstream
   m_BuildTextureStacks: []
+=======
+>>>>>>> Stashed changes
