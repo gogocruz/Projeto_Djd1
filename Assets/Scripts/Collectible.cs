@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     [SerializeField]
-    private int scoreIncrease;
+    private int scoreIncrease = 1;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
