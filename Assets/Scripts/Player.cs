@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
     private float       groundCheckRadius = 3.0f; 
     [SerializeField]
     private LayerMask   groundCheckLayer;
+    [SerializeField]
+    private float useRadius = 50;
+    [SerializeField]
+    private LayerMask useLayer;
 
     private float           hAxis;
     private Rigidbody2D     rb;
@@ -107,6 +111,20 @@ public class Player : MonoBehaviour
         groundCollider.enabled = isGround;
         airCollider.enabled = !isGround;
 
+        if (Input.GetButtonDown("Use"))
+        {
+            Collider2D dialogueCharacter = Physics2D.OverlapCircle(transform.position, useRadius, useLayer);
+
+            if (dialogueCharacter)
+            {
+                DialogueCharacter dc = dialogueCharacter.GetComponent<DialogueCharacter>();
+                if (dc)
+                {
+                    dc.StartDialogue(SpriteRenderer);
+                }
+            }
+        }
+
     }
     
     public void UpdateScore(int scoreIncrease)
@@ -129,5 +147,8 @@ public class Player : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(transform.position + Vector3.up * 10.0f, transform.position + velocity + Vector3.up * 10.0f);
         }
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, useRadius);
     }
 }
