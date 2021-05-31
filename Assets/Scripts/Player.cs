@@ -24,9 +24,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private LayerMask   groundCheckLayer;
     [SerializeField]
-    private float useRadius = 50;
+    private float       useRadius = 50;
     [SerializeField]
-    private LayerMask useLayer;
+    private LayerMask   useLayer;
+    
 
     private float           hAxis;
     private Rigidbody2D     rb;
