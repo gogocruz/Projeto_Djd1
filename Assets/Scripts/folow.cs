@@ -26,7 +26,8 @@ public class folow : MonoBehaviour
             targetPos = currentPos + error * followSpeed;
             currentPos = new Vector3(targetPos.x, targetPos.y, currentPos.z);
 
-            currentPos.y += 12;
+            currentPos.y += 8;
+            currentPos.x += 3;
         }
         
 

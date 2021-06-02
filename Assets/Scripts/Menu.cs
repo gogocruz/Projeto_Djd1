@@ -9,7 +9,14 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("WaterPlanet");
     }
-
+    public void StartControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+    public void StartMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Quit()
     {
         Application.Quit();

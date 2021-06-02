@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/WaterPlanet.unity
     guid: e0b80ab3a44c1f248a5e8c5218bbd180
+  - enabled: 1
+    path: Assets/scenes/Controls.unity
+    guid: 09e25e1ae3ad7f34a8a5b4d432dee5fa
   m_configObjects: {}
