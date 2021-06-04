@@ -23,9 +23,12 @@ public class DialogueSystem : MonoBehaviour
     Image               characterImage;
 
     DialogueItem[] currentDialogue;
+    DialogueItem[] currentLog;
     int            dialogueIndex;
+    int            logIndex;
     SpriteRenderer selfSpriteRenderer;
     SpriteRenderer otherSpriteRenderer;
+    Sprite         logImage;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +53,26 @@ public class DialogueSystem : MonoBehaviour
                 {
                     system.SetActive(false);
                     currentDialogue = null;
+
+                    Player player = FindObjectOfType<Player>();
+                    player.enabled = true;
+                }
+            }
+        }
+        else if (currentLog != null)
+        {
+            if (Input.GetButtonDown("Use"))
+            {
+                logIndex++;
+
+                if (logIndex < currentLog.Length)
+                {
+                    ShowLog();
+                }
+                else
+                {
+                    system.SetActive(false);
+                    currentLog = null;
 
                     Player player = FindObjectOfType<Player>();
                     player.enabled = true;
@@ -88,5 +111,28 @@ public class DialogueSystem : MonoBehaviour
             characterName.text = otherSpriteRenderer.name;
             characterImage.sprite = otherSpriteRenderer.sprite;
         }
+    }
+
+    public void StartLog(DialogueItem[] dialogue, Sprite logSprite)
+    {
+        Player player = FindObjectOfType<Player>();
+        player.enabled = false;
+
+        system.SetActive(true);
+
+        logImage = logSprite;
+
+        currentLog = dialogue;
+        logIndex = 0;
+
+        ShowLog();
+    }
+
+    private void ShowLog()
+    {
+        dialogueText.text = currentLog[logIndex].text;
+
+        characterName.text = "Log";
+        characterImage.sprite = logImage;
     }
 }
