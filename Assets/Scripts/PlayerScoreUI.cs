@@ -21,7 +21,8 @@ public class PlayerScoreUI : MonoBehaviour
         if (player != null)
         {
             int score = player.score;
-            string scoreText = $"Score: {score}";
+            int totalLogs = 4;
+            string scoreText = $"{score} / {totalLogs}";
 
             textScoreElement.text = scoreText;
         }
