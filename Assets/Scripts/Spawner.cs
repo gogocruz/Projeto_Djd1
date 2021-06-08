@@ -34,13 +34,25 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         GameObject collidingObject = collision.gameObject;
 
         if (collidingObject.tag == "Player")
         {
-            isActive = true;Debug.Log("Player is in danger zone");
+            isActive = true;
+            Debug.Log("Player is in danger zone");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject collidingObject = collision.gameObject;
+
+        if (collidingObject.tag == "Player")
+        {
+            isActive = false;
+            Debug.Log("Player left the danger zone");
         }
     }
 

@@ -31,7 +31,8 @@ public class Player : MonoBehaviour
     private float knockbackDuration = 0.25f;
     [SerializeField]
     public float knockbackDistance = 50.0f;
-
+    [SerializeField]
+    private GameObject waterParticles;
 
     private float           hAxis;
     private Rigidbody2D     rb;
@@ -67,6 +68,18 @@ public class Player : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(groundCheckObject.position, groundCheckRadius, groundCheckLayer);
 
         bool isGround = (collider != null);
+
+        if (isGround)
+        {
+            if (collider.tag == "Water")
+            {
+                waterParticles.SetActive(true);
+            }
+            else
+            {
+                waterParticles.SetActive(false);
+            }
+        }
         
         if ((isGround) && (Mathf.Abs(rb.velocity.y) < 0.1f))
         {
