@@ -8,6 +8,9 @@ public class PlayerScoreUI : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI textScoreElement;
 
+    [SerializeField]
+    int totalLogs = 4;
+
     Player player;
 
     // Update is called once per frame
@@ -21,7 +24,6 @@ public class PlayerScoreUI : MonoBehaviour
         if (player != null)
         {
             int score = player.score;
-            int totalLogs = 4;
             string scoreText = $"{score} / {totalLogs}";
 
             textScoreElement.text = scoreText;
