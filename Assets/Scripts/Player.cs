@@ -27,7 +27,11 @@ public class Player : MonoBehaviour
     private float       useRadius = 50;
     [SerializeField]
     private LayerMask   useLayer;
-    
+    [SerializeField]
+    private float knockbackDuration = 0.25f;
+    [SerializeField]
+    public float knockbackDistance = 50.0f;
+
 
     private float           hAxis;
     private Rigidbody2D     rb;
@@ -36,6 +40,7 @@ public class Player : MonoBehaviour
     private int             nJumps;
     private float           timeOfJump;
     private int             currentScore = 0;
+    private float           knockbackTimer;
 
     public int score => currentScore;
 
@@ -48,7 +53,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(hAxis * moveSpeed, rb.velocity.y);    
+        if (knockbackTimer <= 0)
+        {
+            rb.velocity = new Vector2(hAxis * moveSpeed, rb.velocity.y);
+        }
     }
 
    
@@ -126,11 +134,25 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (knockbackTimer > 0)
+        {
+            knockbackTimer -= Time.deltaTime;
+        }
+
     }
     
     public void UpdateScore(int scoreIncrease)
     {
         currentScore += scoreIncrease;
+    }
+
+    public void TakeKnockback(Vector2 hitDirection, float distance)
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        Vector2 knockback = new Vector2(hitDirection.x + distance, 200.0f);
+        knockbackTimer = knockbackDuration;
+        rb.velocity = knockback;
     }
 
     private void OnDrawGizmosSelected()
