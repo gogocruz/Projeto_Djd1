@@ -69533,7 +69533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd4bd0f0f572f84a9692e55c8a7fe12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObject: {fileID: 3017872900407398156, guid: caf67b92c9f883040ba4b3b7709f36bd,
+  fallingObject: {fileID: 3912921280987563355, guid: 2c3a5a4cd6386274392b8a04bc8210e3,
     type: 3}
   camera: {fileID: 303036386}
   player: {fileID: 1791284607}
@@ -69853,7 +69853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791284600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.3, y: -55.5, z: 0}
+  m_LocalPosition: {x: -73.4, y: -63.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2008186358}
@@ -70268,7 +70268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008186357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 21.4, z: 0}
+  m_LocalPosition: {x: 0.6, y: 21.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791284607}
@@ -70301,7 +70301,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 8, y: 23.29}
+  m_Size: {x: 12, y: 23.29}
   m_Direction: 0
 --- !u!1 &2023598908
 GameObject:
