@@ -2358,9 +2358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - self: 0
-    text: Hey there!
-  - self: 0
-    text: This is a test!
+    text: Breathable atmosphere; abundance of water.
   image: {fileID: 4272825389798803380, guid: 0820db94fd17d53488e3789d76e2c1c8, type: 3}
   scoreIncrease: 1
 --- !u!95 &308043442
@@ -12443,9 +12441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - self: 0
-    text: Hey there!
-  - self: 0
-    text: This is a test!
+    text: a lot of water; no land sighted; can it sustain life?
   image: {fileID: 4272825389798803380, guid: 0820db94fd17d53488e3789d76e2c1c8, type: 3}
   scoreIncrease: 1
 --- !u!212 &949195198
@@ -28400,9 +28396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - self: 0
-    text: Hey there!
-  - self: 0
-    text: This is a test!
+    text: APPROACH WITH CARE
   image: {fileID: 4272825389798803380, guid: 0820db94fd17d53488e3789d76e2c1c8, type: 3}
   scoreIncrease: 1
 --- !u!95 &1261363538
@@ -30358,8 +30352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - self: 0
-    text: Hey there!
+  - self: 1
+    text: giant waves, beware
   - self: 0
     text: This is a test!
   image: {fileID: 4272825389798803380, guid: 0820db94fd17d53488e3789d76e2c1c8, type: 3}
