@@ -8,17 +8,17 @@ public class Timer : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI countDownText;
 
-    private float currentTime = 0f;
+    public float CurrentTime { get; private set; }
     
     [SerializeField]
     private float startingTime = 20f;
-    private bool startCount;
+    public bool startCount { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
         countDownText.enabled = false;
-        currentTime = startingTime;
+        CurrentTime = startingTime;
         startCount = false;
     }
 
@@ -27,15 +27,15 @@ public class Timer : MonoBehaviour
     {
         if (startCount)
         {
-            currentTime -= 1 * Time.deltaTime;
+            CurrentTime -= 1 * Time.deltaTime;
             //countDownText.text = $"{currentTime.ToString():f4}";
-            countDownText.text = System.String.Format("{0:0.00}", currentTime);
-            Invoke("ResetScene", startingTime);
+            countDownText.text = System.String.Format("{0:0.00}", CurrentTime);
+            //Invoke("ResetScene", startingTime);
 
-            if (currentTime <= 0)
+            if (CurrentTime <= 0)
             {
                 countDownText.text = "0.00";
-                
+                countDownText.enabled = false;
             }
         }
     }
