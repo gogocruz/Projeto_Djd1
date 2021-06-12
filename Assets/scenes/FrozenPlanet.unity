@@ -28360,7 +28360,7 @@ MonoBehaviour:
     m_Bits: 2048
   knockbackDuration: 0.25
   knockbackDistance: 150
-  waterParticles: {fileID: 0}
+  waterParticles: {fileID: 84086462}
 --- !u!70 &1791284602
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
