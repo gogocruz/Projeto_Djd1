@@ -165,7 +165,20 @@ public class Player : MonoBehaviour
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
-        Vector2 knockback = new Vector2(hitDirection.x + distance, 200.0f);
+        Collider2D collider = Physics2D.OverlapCircle(groundCheckObject.position, groundCheckRadius, groundCheckLayer);
+
+        bool isGround = (collider != null);
+
+        Vector2 knockback;
+        if (!isGround)
+        {
+            knockback = new Vector2(hitDirection.x + distance, -100.0f);
+        }
+        else
+        {
+            knockback = new Vector2(hitDirection.x + distance, 200.0f);
+        }
+    
         knockbackTimer = knockbackDuration;
         rb.velocity = knockback;
     }
