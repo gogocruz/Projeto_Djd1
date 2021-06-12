@@ -44,12 +44,14 @@ public class Player : MonoBehaviour
     private float           knockbackTimer;
 
     public int score => currentScore;
+    public bool CanFinishLevel { get; set; }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
         SpriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        CanFinishLevel = false;
     }
 
     void FixedUpdate()
