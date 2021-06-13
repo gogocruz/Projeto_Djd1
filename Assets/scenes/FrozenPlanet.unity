@@ -69987,7 +69987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 1925438321}
-  startingTime: 45
+  startingTime: 60
 --- !u!114 &1925438321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70021,7 +70021,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4282226921
-  m_fontColor: {r: 0.9150943, g: 0.59571826, b: 0.23740657, a: 1}
+  m_fontColor: {r: 0.9137255, g: 0.59607846, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

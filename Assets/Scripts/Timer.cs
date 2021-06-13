@@ -28,9 +28,13 @@ public class Timer : MonoBehaviour
         if (startCount)
         {
             CurrentTime -= 1 * Time.deltaTime;
-            //countDownText.text = $"{currentTime.ToString():f4}";
+            
+            if (CurrentTime <= 10.0f)
+            {
+                countDownText.color = new Color32(180, 24, 9, 255);
+            }
+
             countDownText.text = System.String.Format("{0:0.00}", CurrentTime);
-            //Invoke("ResetScene", startingTime);
 
             if (CurrentTime <= 0)
             {
@@ -39,20 +43,15 @@ public class Timer : MonoBehaviour
             }
         }
     }
-    public void ResetScene()
+    /*public void ResetScene()
     {
         Application.LoadLevel(Application.loadedLevel);
-    }
+    }*/
 
     public void Activate()
     {
         countDownText.enabled = true;
         startCount = true;
-    }
-
-    public void ResetTimer()
-    {
-        CurrentTime = startingTime;
     }
 
     public void StopCount()
