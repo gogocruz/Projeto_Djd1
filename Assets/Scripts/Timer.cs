@@ -49,4 +49,15 @@ public class Timer : MonoBehaviour
         countDownText.enabled = true;
         startCount = true;
     }
+
+    public void ResetTimer()
+    {
+        CurrentTime = startingTime;
+    }
+
+    public void StopCount()
+    {
+        countDownText.enabled = false;
+        startCount = false;
+    }
 }

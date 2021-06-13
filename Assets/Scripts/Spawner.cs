@@ -52,7 +52,7 @@ public class Spawner : MonoBehaviour
         if (collidingObject.tag == "Player")
         {
             isActive = false;
-            Debug.Log("Player left the danger zone");
+            //Debug.Log("Player left the danger zone");
         }
     }
 
