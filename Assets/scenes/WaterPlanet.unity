@@ -30219,7 +30219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 1668333967}
-  startingTime: 35
+  startingTime: 45
 --- !u!1 &1699545607
 GameObject:
   m_ObjectHideFlags: 0
@@ -31290,8 +31290,6 @@ MonoBehaviour:
   dialogue:
   - self: 1
     text: giant waves, beware
-  - self: 0
-    text: This is a test!
   image: {fileID: 4272825389798803380, guid: 0820db94fd17d53488e3789d76e2c1c8, type: 3}
   scoreIncrease: 1
 --- !u!95 &1976684488
