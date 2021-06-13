@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("WaterPlanet");
+        SceneManager.LoadScene("AfterMainMenu");
     }
     public void StartControls()
     {
