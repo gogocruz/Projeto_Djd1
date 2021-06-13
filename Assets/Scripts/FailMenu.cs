@@ -35,7 +35,6 @@ public class FailMenu : MonoBehaviour
     public void PauseGame()
     {
         failMenu.SetActive(true);
-        
     }
 
     public void ReloadCurrentScene()
