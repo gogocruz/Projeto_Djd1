@@ -22,7 +22,7 @@ public class FailMenu : MonoBehaviour
 
         if (timer != null)
         {
-            if (timer.startCount)
+            if (timer.StartCount)
             {
                 if (timer.CurrentTime <= 0)
                 {

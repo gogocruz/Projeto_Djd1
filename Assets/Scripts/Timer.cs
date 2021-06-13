@@ -12,20 +12,20 @@ public class Timer : MonoBehaviour
     
     [SerializeField]
     private float startingTime = 20f;
-    public bool startCount { get; private set; }
+    public bool StartCount { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
         countDownText.enabled = false;
         CurrentTime = startingTime;
-        startCount = false;
+        StartCount = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startCount)
+        if (StartCount)
         {
             CurrentTime -= 1 * Time.deltaTime;
             
@@ -51,12 +51,12 @@ public class Timer : MonoBehaviour
     public void Activate()
     {
         countDownText.enabled = true;
-        startCount = true;
+        StartCount = true;
     }
 
     public void StopCount()
     {
         countDownText.enabled = false;
-        startCount = false;
+        StartCount = false;
     }
 }

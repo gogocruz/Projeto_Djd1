@@ -11,10 +11,12 @@ public class TimerStop : MonoBehaviour
             Timer timer = FindObjectOfType<Timer>();
 
             if (timer != null)
-            {
-                timer.StopCount();
+            {   
+                if (timer.StartCount)
+                {
+                    timer.StopCount();
+                }
             }
-            Debug.Log("Player left the danger zone");
         }
     }
 }
