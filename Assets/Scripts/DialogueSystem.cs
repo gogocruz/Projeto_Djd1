@@ -135,4 +135,27 @@ public class DialogueSystem : MonoBehaviour
         characterName.text = "Log";
         characterImage.sprite = logImage;
     }
+
+    public void ShowTarsMessage(DialogueItem[] dialogue, Sprite logSprite)
+    {
+        Player player = FindObjectOfType<Player>();
+        player.enabled = false;
+
+        system.SetActive(true);
+
+        logImage = logSprite;
+
+        currentLog = dialogue;
+        logIndex = 0;
+
+        ShowMessage();
+    }
+
+    public void ShowMessage()
+    {
+        dialogueText.text = currentLog[logIndex].text;
+
+        characterName.text = "Tars";
+        characterImage.sprite = logImage;
+    }
 }
