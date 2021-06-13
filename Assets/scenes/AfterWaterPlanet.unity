@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "After successfully retriving the transmitter, the crew heads to the planet
     where Dr. Mann is located.\nAfter getting there and waking him from his spleep
-    you notice a strange\n behaviour coming from him, but before you know it, Mann
+    you notice a strange \nbehaviour coming from him, but before you know it, Mann
     pushes you into a creek and tries to escape the planet.\n\nYour mission now is
     to stop him...\n"
   m_isRightToLeft: 0
