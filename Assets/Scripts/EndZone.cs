@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndZone : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();
         if (player != null)

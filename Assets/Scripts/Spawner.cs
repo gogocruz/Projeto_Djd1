@@ -34,6 +34,19 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Player player = collision.GetComponent<Player>();
+            if (player != null)
+            {
+                player.CanFinishLevel = true;
+                Debug.Log("Player is able to complete the level");
+            }
+        }
+    }
+
     void OnTriggerStay2D(Collider2D collision)
     {
         GameObject collidingObject = collision.gameObject;
@@ -41,7 +54,6 @@ public class Spawner : MonoBehaviour
         if (collidingObject.tag == "Player")
         {
             isActive = true;
-            Debug.Log("Player is in danger zone");
         }
     }
 
@@ -52,7 +64,6 @@ public class Spawner : MonoBehaviour
         if (collidingObject.tag == "Player")
         {
             isActive = false;
-            //Debug.Log("Player left the danger zone");
         }
     }
 
