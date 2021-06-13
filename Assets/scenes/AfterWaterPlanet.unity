@@ -180,18 +180,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After successfully retriving the transmitter, the crew heads to the planet
-    where Dr. Mann is located.
-
-    After getting there and waking him from his spleep
-    you notice a stranger behaviour coming from him, but before you know it, Mann
-    pushes you into a creek and tries to escape the planet.
-
-
-    Your mission now
-    is to stop him...
-
-'
+  m_text: "After successfully retriving the transmitter, the crew heads to the planet
+    where Dr. Mann is located.\nAfter getting there and waking him from his spleep
+    you notice a strange\n behaviour coming from him, but before you know it, Mann
+    pushes you into a creek and tries to escape the planet.\n\nYour mission now is
+    to stop him...\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd27e0f9a4bc70c488ee27fd94099f19, type: 2}
   m_sharedMaterial: {fileID: -7495291758626398904, guid: fd27e0f9a4bc70c488ee27fd94099f19,
